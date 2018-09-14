@@ -16,4 +16,4 @@
 # but then also subtract one because wc -m counts newlines!
 # Another solution would be to use tr like so
 # head -2 primer_B.fasta | tail -1 | tr -d '\n' | wc -m
-expr $(head -2 primer_B.fasta | tail -1 | wc -m) -1
+expr $(head -2 "$@" | tail -1 | wc -m) -1
